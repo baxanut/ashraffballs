@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RecallCam — Never Lose Anything Again</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="progress"></div>
+  <div id="grain"></div>
+
+  <nav id="nav">
+    <span class="nav-logo">RecallCam</span>
+    <div id="nav-pills"></div>
+    <span class="nav-year">2025</span>
+  </nav>
+
+  <main id="main">
+
+    <!-- ░░ 00 · HERO ░░ -->
+    <section class="scene" id="s0" data-label="Intro">
+      <canvas id="hero-canvas"></canvas>
+      <div class="grid-lines"></div>
+      <div class="scene-inner center">
+        <p class="eyebrow animate" data-delay="0">
+          <span class="live-dot"></span>AI-Powered Memory Assistant
+        </p>
+        <h1 class="hero-heading animate" data-delay="100">
+          <em>Recall</em>Cam
+        </h1>
+        <p class="hero-sub animate" data-delay="200">
+          You've lost something important.<br>We make sure it never happens again.
+        </p>
+        <div class="hero-media animate" data-delay="350">
+          <video autoplay muted loop playsinline>
+            <source src="assets/videos/hero.mp4" type="video/mp4">
+          </video>
+          <div class="media-placeholder">
+            <div class="play-icon">▶</div>
+            <strong>Hero Video</strong>
+            <small>assets/videos/hero.mp4</small>
+          </div>
+          <div class="media-badge">
+            <span class="badge-dot"></span>RecallCam — Always On
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint animate" data-delay="600">
+        <span>scroll</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
+
+    <!-- ░░ 01 · PROBLEM ░░ -->
+    <section class="scene s-dark" id="s1" data-label="Problem">
+      <div class="noise-layer"></div>
+      <div class="scene-inner split">
+        <div class="col-text">
+          <p class="scene-tag animate" data-delay="0">01 — The Problem</p>
+          <h2 class="scene-heading animate" data-delay="80">
+            The world around<br>you has <em>no memory.</em>
+          </h2>
+          <p class="scene-body animate" data-delay="160">
+            The average person spends <strong>1,500 hours</strong> over their lifetime searching for misplaced items. That's 10 minutes every single day — gone forever.
+          </p>
+          <div class="stat-block animate" data-delay="240">
+            <span class="stat-number" data-target="1500">0</span>
+            <div class="stat-meta">
+              <span class="stat-unit">hours</span>
+              <span class="stat-desc">lost searching for things you already own</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-visual animate" data-delay="100">
+          <div class="chaos-list">
+            <div class="chaos-item"><span class="ci-icon">🔑</span><span class="ci-label">Keys</span><span class="ci-status">last seen?</span></div>
+            <div class="chaos-item"><span class="ci-icon">👛</span><span class="ci-label">Wallet</span><span class="ci-status">no idea</span></div>
+            <div class="chaos-item"><span class="ci-icon">📋</span><span class="ci-label">Documents</span><span class="ci-status">missing</span></div>
+            <div class="chaos-item"><span class="ci-icon">💊</span><span class="ci-label">Medication</span><span class="ci-status">unknown</span></div>
+            <div class="chaos-item"><span class="ci-icon">🎧</span><span class="ci-label">Earbuds</span><span class="ci-status">???</span></div>
+          </div>
+          <div class="video-card animate" data-delay="200">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/problem.mp4" type="video/mp4">
+            </video>
+            <div class="media-placeholder small">
+              <div class="play-icon sm">▶</div>
+              <strong>Problem Scene</strong>
+              <small>assets/videos/problem.mp4</small>
+            </div>
+            <div class="card-label">The Daily Frustration</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ 02 · INSIGHT ░░ -->
+    <section class="scene s-void" id="s2" data-label="Insight">
+      <canvas class="ambient-canvas" id="insight-canvas"></canvas>
+      <div class="scene-inner center">
+        <p class="scene-tag animate" data-delay="0">02 — The Insight</p>
+        <blockquote class="pull-quote animate" data-delay="100">
+          "The problem isn't<br>that we're <em>forgetful</em> —<br>
+          it's that our world<br>is <em>blind.</em>"
+        </blockquote>
+        <div class="rule animate" data-delay="300"></div>
+        <p class="pull-sub animate" data-delay="380">
+          Every device around you is passive. It captures nothing, recalls nothing.<br>
+          We built the memory layer your environment was always missing.
+        </p>
+      </div>
+    </section>
+
+    <!-- ░░ 03 · PRODUCT ░░ -->
+    <section class="scene" id="s3" data-label="Product">
+      <div class="grid-lines purple"></div>
+      <div class="scene-inner center">
+        <p class="scene-tag animate" data-delay="0">03 — The Product</p>
+        <h2 class="scene-heading animate" data-delay="80" style="text-align:center">
+          Meet <em>RecallCam</em>
+        </h2>
+        <p class="scene-body animate" data-delay="160" style="text-align:center;max-width:500px;margin:0 auto 52px">
+          A wearable AI bodycam that silently logs photos, location &amp; time — all day, automatically. When you lose something, you don't search. You just ask.
+        </p>
+        <div class="product-grid animate" data-delay="240">
+          <div class="device-wrap">
+            <div class="device-glow-bg"></div>
+            <svg class="device-svg" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="deviceGrad" x1="18" y1="8" x2="122" y2="212" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="rgba(167,139,250,0.22)"/>
+                  <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+                </linearGradient>
+              </defs>
+              <rect x="18" y="8" width="104" height="204" rx="20" fill="#0e0a1a" stroke="rgba(167,139,250,0.38)" stroke-width="1.5"/>
+              <rect x="18" y="8" width="104" height="204" rx="20" fill="url(#deviceGrad)" opacity=".55"/>
+              <rect x="28" y="26" width="84" height="104" rx="10" fill="#06040f" stroke="rgba(167,139,250,0.13)"/>
+              <rect x="36" y="36" width="52" height="5" rx="2.5" fill="rgba(167,139,250,0.55)"/>
+              <rect x="36" y="47" width="38" height="3" rx="1.5" fill="rgba(255,255,255,0.09)"/>
+              <rect x="36" y="55" width="68" height="3" rx="1.5" fill="rgba(255,255,255,0.05)"/>
+              <rect x="36" y="63" width="48" height="3" rx="1.5" fill="rgba(255,255,255,0.05)"/>
+              <rect x="36" y="71" width="58" height="3" rx="1.5" fill="rgba(255,255,255,0.04)"/>
+              <circle cx="82" cy="100" r="13" fill="rgba(167,139,250,0.07)" stroke="rgba(167,139,250,0.32)"/>
+              <circle cx="82" cy="100" r="5" fill="rgba(167,139,250,0.92)"/>
+              <circle cx="68" cy="158" r="25" fill="#06040f" stroke="rgba(167,139,250,0.32)" stroke-width="1.5"/>
+              <circle cx="68" cy="158" r="16" fill="#03020a" stroke="rgba(167,139,250,0.16)"/>
+              <circle cx="68" cy="158" r="9" fill="rgba(167,139,250,0.14)"/>
+              <circle cx="68" cy="158" r="4.5" fill="rgba(167,139,250,0.88)"/>
+              <circle cx="61" cy="151" r="2.5" fill="rgba(255,255,255,0.5)"/>
+              <circle cx="103" cy="158" r="4.5" fill="#a855f7">
+                <animate attributeName="opacity" values="0.9;0.15;0.9" dur="2.4s" repeatCount="indefinite"/>
+              </circle>
+              <rect x="54" y="1" width="32" height="14" rx="5" fill="#0e0a1a" stroke="rgba(167,139,250,0.22)"/>
+              <rect x="62" y="-1" width="16" height="7" rx="3" fill="#1a1030" stroke="rgba(167,139,250,0.16)"/>
+              <rect x="46" y="197" width="48" height="9" rx="4.5" fill="rgba(167,139,250,0.09)" stroke="rgba(167,139,250,0.22)"/>
+            </svg>
+            <div class="device-specs">
+              <div class="spec-row"><span>Battery</span><span>All-day</span></div>
+              <div class="spec-row"><span>Storage</span><span>32 GB</span></div>
+              <div class="spec-row"><span>Weight</span><span>18 g</span></div>
+              <div class="spec-row"><span>Mount</span><span>Clip-on</span></div>
+            </div>
+          </div>
+          <div class="product-video-wrap">
+            <div class="video-card portrait">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/product.mp4" type="video/mp4">
+              </video>
+              <div class="media-placeholder">
+                <div class="play-icon">▶</div>
+                <strong>Product Reveal</strong>
+                <small>assets/videos/product.mp4</small>
+              </div>
+            </div>
+            <div class="tag-row">
+              <span class="tag">GPS Logging</span>
+              <span class="tag">AI Vision</span>
+              <span class="tag">Smart Search</span>
+              <span class="tag">Privacy First</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ 04 · FEATURES ░░ -->
+    <section class="scene s-dark" id="s4" data-label="Features">
+      <div class="noise-layer"></div>
+      <div class="scene-inner">
+        <p class="scene-tag animate" data-delay="0">04 — Features</p>
+        <h2 class="scene-heading animate" data-delay="80">
+          Three things.<br><em>One device.</em>
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card animate" data-delay="0">
+            <div class="feat-media">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/feat-timeline.mp4" type="video/mp4">
+              </video>
+              <div class="media-placeholder small">
+                <div class="play-icon sm">▶</div>
+                <strong>Feature 1</strong>
+                <small>feat-timeline.mp4</small>
+              </div>
+            </div>
+            <div class="feat-body">
+              <span class="feat-letter">A</span>
+              <h3>Auto-logs your entire day</h3>
+              <p>Passive capture — zero behaviour change. Every object logged with photo, timestamp and GPS.</p>
+            </div>
+          </div>
+          <div class="feature-card animate" data-delay="80">
+            <div class="feat-media">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/feat-search.mp4" type="video/mp4">
+              </video>
+              <div class="media-placeholder small">
+                <div class="play-icon sm">▶</div>
+                <strong>Feature 2</strong>
+                <small>feat-search.mp4</small>
+              </div>
+            </div>
+            <div class="feat-body">
+              <span class="feat-letter">B</span>
+              <h3>Ask where anything is</h3>
+              <p>Natural language search. Photo + location pin returned in under 3 seconds.</p>
+            </div>
+          </div>
+          <div class="feature-card animate" data-delay="160">
+            <div class="feat-media">
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/feat-map.mp4" type="video/mp4">
+              </video>
+              <div class="media-placeholder small">
+                <div class="play-icon sm">▶</div>
+                <strong>Feature 3</strong>
+                <small>feat-map.mp4</small>
+              </div>
+            </div>
+            <div class="feat-body">
+              <span class="feat-letter">C</span>
+              <h3>Your day, mapped in full</h3>
+              <p>Complete spatial history. Retrace steps and pinpoint any object instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ 05 · TRACTION ░░ -->
+    <section class="scene s-void" id="s5" data-label="Traction">
+      <canvas class="ambient-canvas" id="traction-canvas"></canvas>
+      <div class="scene-inner center">
+        <p class="scene-tag animate" data-delay="0">05 — Traction</p>
+        <h2 class="scene-heading animate" data-delay="80" style="text-align:center">
+          Early proof.<br><em>Real results.</em>
+        </h2>
+        <div class="stats-band animate" data-delay="200">
+          <div class="stat-cell">
+            <div class="stat-val"><span class="counter" data-target="50">0</span><span class="stat-sup">+</span></div>
+            <p>Beta testers</p>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-cell">
+            <div class="stat-val"><span class="counter" data-target="97">0</span><span class="stat-sup">%</span></div>
+            <p>Retrieval accuracy</p>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-cell">
+            <div class="stat-val"><span class="counter" data-target="3">0</span><span class="stat-sup">s</span></div>
+            <p>Avg. search time</p>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-cell">
+            <div class="stat-val"><span class="counter" data-target="0">0</span></div>
+            <p>Items lost in beta</p>
+          </div>
+        </div>
+        <blockquote class="testimonial animate" data-delay="320">
+          <p>"I found my passport 20 minutes before my flight. RecallCam showed me exactly where I left it — on the nightstand, 6 hours earlier."</p>
+          <cite>— Beta tester, Kuala Lumpur</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ░░ 06 · TEAM ░░ -->
+    <section class="scene" id="s6" data-label="Team">
+      <div class="grid-lines purple"></div>
+      <div class="scene-inner center">
+        <p class="scene-tag animate" data-delay="0">06 — The Team</p>
+        <h2 class="scene-heading animate" data-delay="80" style="text-align:center">
+          Built by people who<br>lost their keys <em>one too many times.</em>
+        </h2>
+        <div class="team-grid">
+          <!-- ★ Replace initials, names, roles, and add real photos ★ -->
+          <div class="team-card animate" data-delay="0">
+            <div class="team-avatar">
+              <img src="assets/team/member1.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="avatar-init">A</div>
+            </div>
+            <h4>Alex</h4>
+            <p>CEO &amp; Hardware</p>
+          </div>
+          <div class="team-card animate" data-delay="80">
+            <div class="team-avatar">
+              <img src="assets/team/member2.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="avatar-init">J</div>
+            </div>
+            <h4>Jamie</h4>
+            <p>AI &amp; Backend</p>
+          </div>
+          <div class="team-card animate" data-delay="160">
+            <div class="team-avatar">
+              <img src="assets/team/member3.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="avatar-init">S</div>
+            </div>
+            <h4>Sam</h4>
+            <p>Product &amp; Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ 07 · CTA ░░ -->
+    <section class="scene s-void" id="s7" data-label="The Ask">
+      <canvas id="cta-canvas"></canvas>
+      <div class="cta-rings"></div>
+      <div class="scene-inner center" style="position:relative;z-index:2">
+        <p class="scene-tag animate" data-delay="0">07 — The Ask</p>
+        <h2 class="cta-heading animate" data-delay="100">
+          Stop losing things.<br><em>Start remembering</em><br>everything.
+        </h2>
+        <p class="cta-sub animate" data-delay="220">
+          We're looking for pilot partners and early investors<br>
+          to bring RecallCam to the world.
+        </p>
+        <div class="cta-actions animate" data-delay="340">
+          <a href="#" class="btn-fill">Join the Waitlist</a>
+          <a href="#" class="btn-outline">View Demo</a>
+        </div>
+        <p class="cta-url animate" data-delay="440">recallcam.app</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
