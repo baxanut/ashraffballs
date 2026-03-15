@@ -387,10 +387,12 @@ video:not([src=""]) ~ .media-placeholder { display: none; }
   background: radial-gradient(circle, rgba(124,58,237,.2) 0%, transparent 70%);
   pointer-events: none;
 }
-.device-svg {
-  width: 128px; height: 201px; position: relative; z-index: 1;
-  filter: drop-shadow(0 0 36px rgba(167,139,250,.28));
+.device-img {
+  width: 220px; max-height: 320px; object-fit: contain;
+  position: relative; z-index: 1;
+  filter: drop-shadow(0 0 36px rgba(167,139,250,.35));
   animation: float 4s ease-in-out infinite;
+  border-radius: 12px;
 }
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 
